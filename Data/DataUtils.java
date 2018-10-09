@@ -16,7 +16,7 @@ public class DataUtils {
         List<NewsItem> news = new ArrayList<>();
         news.add(new NewsItem(
                 "Tourist filmed sitting on 5m-long crocodile",
-                "https://e3.365dm.com/18/09/736x414/skynews-crocodile-australia_4433218.jpg",
+                "http://wildfrontier.ru/wp-content/uploads/2015/04/114.jpg",
                 darwinAwards,
                 createDate(2018, 9, 26, 10, 34),
                 "\"It was dangerous, I know. It is a scary feeling sitting on something that could kill you in a fraction of a "
@@ -70,7 +70,7 @@ public class DataUtils {
         ));
         news.add(new NewsItem(
                 "Nearly $18m of cocaine seized in donated boxes of bananas",
-                "https://e3.365dm.com/18/09/2048x1152/skynews-texas-bananas-drugs_4430760.jpg",
+                "https://newsroom-kh.s3.eu-central-1.amazonaws.com/styles/main_article_image/s3/field/image/tram.jpeg",
                 criminal,
                 createDate(2018, 9, 18, 4, 4),
                 "Massive quantities of the drug were found in boxes of fruit that had been donated to the Texas Department of "
@@ -90,7 +90,7 @@ public class DataUtils {
         ));
         news.add(new NewsItem(
                 "US government hacker jailed after losing secrets",
-                "https://e3.365dm.com/17/09/736x414/d55722dc4eb37f6959d2e047c14710d586aab99f90aa1e4acfd9f992125294f5_4107038.jpg",
+                "https://video-images.vice.com/articles/589c8942d8beda21078a01b6/lede/1486653799489-phineas-fisher-puppet.jpeg",
                 criminal,
                 createDate(2018, 9, 17, 12, 45),
                 "Nghia Hoang Pho, 68, who developed hacking tools for the National Security Agency, illegally stored material "

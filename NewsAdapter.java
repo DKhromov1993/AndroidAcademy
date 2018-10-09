@@ -13,13 +13,14 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.den.androidacademyhomework.Data.NewsItem;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
-    private List<NewsItem> news = new ArrayList<>();
+    private List<NewsItem> news;
     private Context context;
+    OnItemClickListener mItemClickListener;
+
 
 
     public NewsAdapter(Context context, List<NewsItem> news){
@@ -45,6 +46,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         viewHolder.newsTitle.setText(currentNews.getPreviewText());
         viewHolder.newsCategory.setText(currentNews.getCategory().getName());
         viewHolder.newsDate.setText(currentNews.getPublishDate().toString());
+        viewHolder.itemView.setTag(currentNews);
     }
 
     @Override
@@ -52,7 +54,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         return news.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView newsCategory;
         TextView newsTitle;
         TextView newsText;
@@ -66,6 +68,26 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
             newsText = itemView.findViewById(R.id.card_news_text);
             newsImage = itemView.findViewById(R.id.card_image);
             newsDate = itemView.findViewById(R.id.card_date);
+            itemView.setOnClickListener(this);
         }
+
+
+        @Override
+        public void onClick(View view) {
+            NewsItem currentNewsItem = (NewsItem) view.getTag();
+            if (mItemClickListener != null) {
+                mItemClickListener.onItemClick(currentNewsItem);
+            }
+        }
+
+
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(NewsItem newsItem);
+    }
+
+    public void setOnItemClickListener(final OnItemClickListener mItemClickListener) {
+        this.mItemClickListener = mItemClickListener;
     }
 }
