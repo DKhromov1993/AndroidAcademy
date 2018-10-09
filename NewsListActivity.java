@@ -46,7 +46,13 @@ public class NewsListActivity extends AppCompatActivity {
     private final NewsAdapter.OnItemClickListener onItemClickListener = new NewsAdapter.OnItemClickListener() {
         @Override
         public void onItemClick(NewsItem newsItem) {
-            AboutActivity.start((Activity) context, newsItem.getImageUrl());
+            AboutActivity.start((Activity) context,
+                    newsItem.getImageUrl(),
+                    newsItem.getCategory().getName(),
+                    newsItem.getFullText(),
+                    newsItem.getPublishDate().toString(),
+                    newsItem.getTitle()
+            );
         }
     };
 }
