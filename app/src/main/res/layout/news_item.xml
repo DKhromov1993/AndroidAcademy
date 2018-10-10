@@ -34,7 +34,7 @@
 
             <TextView
                 android:id="@+id/card_title"
-                android:layout_width="240dp"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/card_category"
                 android:hint="Носороги искусали человека, когда тот жевал колбасу из чермондера"
@@ -46,7 +46,7 @@
 
             <TextView
                 android:id="@+id/card_news_text"
-                android:layout_width="235dp"
+                android:layout_width="245dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/card_title"
                 android:hint="Лорем ипсумЛорем ипсумЛорем ипсумЛорем ипсумЛорем ипсумЛорем ипсумЛорем ипсумЛорем ипсумЛорем ипсум"

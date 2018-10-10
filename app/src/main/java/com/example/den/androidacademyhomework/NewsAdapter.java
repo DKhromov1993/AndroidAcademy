@@ -42,10 +42,10 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         NewsItem currentNews = news.get(i);
         viewHolder.newsImage.setImageURI(Uri.parse(currentNews.getImageUrl()));
         Glide.with(context).load(currentNews.getImageUrl()).into(viewHolder.newsImage);
-        viewHolder.newsText.setText(currentNews.getFullText());
-        viewHolder.newsTitle.setText(currentNews.getPreviewText());
+        viewHolder.newsText.setText(currentNews.getPreviewText());
+        viewHolder.newsTitle.setText(currentNews.getTitle());
         viewHolder.newsCategory.setText(currentNews.getCategory().getName());
-        viewHolder.newsDate.setText(currentNews.getPublishDate().toString());
+        viewHolder.newsDate.setText(currentNews.getPublishDate("MMM d HH:mm"));
         viewHolder.itemView.setTag(currentNews);
     }
 
