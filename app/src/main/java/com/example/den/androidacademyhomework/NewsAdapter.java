@@ -19,11 +19,10 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
     private List<NewsItem> news;
     private Context context;
-    OnItemClickListener mItemClickListener;
+    private OnItemClickListener mItemClickListener;
 
 
-
-    public NewsAdapter(Context context, List<NewsItem> news){
+    NewsAdapter(Context context, List<NewsItem> news) {
         this.context = context;
         this.news = news;
     }
@@ -61,7 +60,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         ImageView newsImage;
         TextView newsDate;
 
-        public ViewHolder(@NonNull View itemView) {
+        ViewHolder(@NonNull View itemView) {
             super(itemView);
             newsCategory = itemView.findViewById(R.id.card_category);
             newsTitle = itemView.findViewById(R.id.card_title);
@@ -87,7 +86,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         void onItemClick(NewsItem newsItem);
     }
 
-    public void setOnItemClickListener(final OnItemClickListener mItemClickListener) {
+    void setOnItemClickListener(final OnItemClickListener mItemClickListener) {
         this.mItemClickListener = mItemClickListener;
     }
 }

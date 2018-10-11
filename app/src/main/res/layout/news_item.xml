@@ -58,8 +58,8 @@
                 android:layout_height="100dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerInParent="true"
-                android:scaleType="centerCrop"
-                android:contentDescription="@string/picture_iv_alt"/>
+                android:contentDescription="@string/picture_iv_alt"
+                android:scaleType="centerCrop" />
 
             <TextView
                 android:id="@+id/card_date"
