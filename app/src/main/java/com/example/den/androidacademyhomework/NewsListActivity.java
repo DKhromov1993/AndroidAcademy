@@ -50,7 +50,7 @@ public class NewsListActivity extends AppCompatActivity {
                     newsItem.getImageUrl(),
                     newsItem.getCategory().getName(),
                     newsItem.getFullText(),
-                    newsItem.getPublishDate().toString(),
+                    newsItem.getPublishDate("MMM d HH:mm"),
                     newsItem.getTitle()
             );
         }

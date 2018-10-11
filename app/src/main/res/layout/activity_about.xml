@@ -17,21 +17,20 @@
             android:id="@+id/about_iv"
             android:layout_width="match_parent"
             android:layout_height="250dp"
+            android:contentDescription="@string/picture_iv_alt"
             android:scaleType="centerCrop" />
-
 
         <TextView
             android:id="@+id/about_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="5dp"
+            android:textColor="@android:color/black"
             android:textSize="20sp"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/about_date"
@@ -39,14 +38,15 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
 
         <TextView
             android:id="@+id/about_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="@android:color/black"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:textColor="@android:color/black" />
 
     </LinearLayout>
 </ScrollView>

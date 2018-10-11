@@ -1,5 +1,6 @@
 package com.example.den.androidacademyhomework.Data;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class NewsItem {
@@ -34,6 +35,11 @@ public class NewsItem {
 
     public Date getPublishDate() {
         return publishDate;
+    }
+
+    public String getPublishDate(String dateFormatString) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(dateFormatString);
+        return simpleDateFormat.format(publishDate);
     }
 
     public String getPreviewText() {
