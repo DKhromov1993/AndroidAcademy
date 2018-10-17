@@ -10,6 +10,8 @@ import android.support.v7.widget.RecyclerView;
 import com.example.den.androidacademyhomework.Data.DataUtils;
 import com.example.den.androidacademyhomework.Data.NewsItem;
 
+import java.util.List;
+
 import static android.support.v7.widget.RecyclerView.LayoutManager;
 
 public class NewsListActivity extends AppCompatActivity {
@@ -22,13 +24,15 @@ public class NewsListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_news_list);
         context = this;
 
+        List<NewsItem> news = DataUtils.generateNews();
+
         LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        VerticalSpaceItemDecoration itemDecoration1 = new VerticalSpaceItemDecoration(4);
+        VerticalSpaceItemDecoration itemDecoration = new VerticalSpaceItemDecoration(4);
         RecyclerView recyclerView = findViewById(R.id.rv_news);
-        newsAdapter = new NewsAdapter(this, DataUtils.generateNews());
+        newsAdapter = new NewsAdapter(this, news);
         recyclerView.setAdapter(newsAdapter);
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.addItemDecoration(itemDecoration1);
+        recyclerView.addItemDecoration(itemDecoration);
 
     }
 
