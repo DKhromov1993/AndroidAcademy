@@ -16,13 +16,11 @@ import static android.support.v7.widget.RecyclerView.LayoutManager;
 
 public class NewsListActivity extends AppCompatActivity {
     NewsAdapter newsAdapter;
-    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news_list);
-        context = this;
 
         List<NewsItem> news = DataUtils.generateNews();
 
@@ -50,13 +48,7 @@ public class NewsListActivity extends AppCompatActivity {
     private final NewsAdapter.OnItemClickListener onItemClickListener = new NewsAdapter.OnItemClickListener() {
         @Override
         public void onItemClick(NewsItem newsItem) {
-            AboutActivity.start((Activity) context,
-                    newsItem.getImageUrl(),
-                    newsItem.getCategory().getName(),
-                    newsItem.getFullText(),
-                    newsItem.getPublishDate("MMM d HH:mm"),
-                    newsItem.getTitle()
-            );
+            AboutActivity.start(NewsListActivity.this, newsItem);
         }
     };
 }
