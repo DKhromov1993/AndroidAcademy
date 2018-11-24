@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidAcademyHomeWork</string>
+    <string name="hint_news_category">Категория</string>
+    <string name="hint_news_title">Носороги искусали человека, когда тот жевал колбасу из чермондера</string>
+    <string name="hint_news_text">Лорем ипсумЛорем ипсумЛорем ипсумЛорем ипсумЛорем ипсумЛорем ипсумЛорем ипсумЛорем ипсумЛорем ипсум</string>
+    <string name="hint_news_date">2018, 9, 26, 10, 34</string>
+    <string name="picture_iv_alt">Картинка новости</string>
+</resources>
